@@ -36,7 +36,7 @@ function AddTask({ setListTask, mode }) {
                     isCompleted: false,
                     isImportant: false
                 })}
-                onKeyUp={(e) => e.keyCode === 13 && handleSubmitJob()}
+                onKeyUp={(e) => e.key === 'Enter' && handleSubmitJob()}
             />
 
             <button
