@@ -72,11 +72,11 @@ function App() {
   return (
     <div>
       <header
-        className='h-40 text-center grid grid-rows-3 grid-cols-12'
+        className='text-center 2xl:h-40 2xl:grid 2xl:grid-rows-3 2xl:grid-cols-12 md:h-40 md:grid md:grid-rows-3 md:grid-cols-12'
       >
         <h1
           className=
-          "header__title font-mono font-black text-6xl mt-12 col-start-5 col-end-9"
+          "font-mono font-black 2xl:text-6xl md:text-6xl 2xl:mt-12 md:mt-12 2xl:col-start-5 2xl:col-end-9 md:col-start-3 md:col-end-11 mt-8 text-5xl"
           style={{
             color: "#0ea5e9"
           }}
@@ -84,14 +84,16 @@ function App() {
           My ToDo List
         </h1>
         <p
-          className='mt-2 mb-4 text-white flex row-start-3 col-start-6 col-end-10'
+          className='2xl:mt-2 md:mt-2 mb-4 text-white flex justify-between 2xl:row-start-3 2xl:col-start-6 2xl:col-end-10 md:row-start-3 md:col-start-5 md:col-end-12 md:ml-8 mt-4 w-11/12 mx-auto'
         >
           <span
-            className=''
-          >Ngày {day} tháng {month} năm {year}</span>
+            className='text-sm'
+          >
+            Ngày {day} tháng {month} năm {year}
+          </span>
 
           <img
-            className='h-6 ml-64'
+            className='h-6 2xl:ml-56 md:ml-40 mr-9'
             src={darkMode ? 'sun.png' : '/moon.png'}
             onClick={() => setDarkMode(!darkMode)}
             alt=''

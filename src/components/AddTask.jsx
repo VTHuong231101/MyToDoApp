@@ -21,7 +21,7 @@ function AddTask({ setListTask, mode }) {
 
     return (
         <div
-            className='w-6/12 mx-auto h-14 rounded-md flex overflow-hidden'
+            className='mx-auto rounded-md flex overflow-hidden 2xl:w-6/12 2xl:h-14 md:w-4/5 w-11/12'
             style={{
                 backgroundColor: '#e0e0e0'
             }}
@@ -36,7 +36,7 @@ function AddTask({ setListTask, mode }) {
                     isCompleted: false,
                     isImportant: false
                 })}
-                onKeyUp={(e) => e.keyCode === 13 && handleSubmitJob()}
+                onKeyUp={(e) => e.key === 'Enter' && handleSubmitJob()}
             />
 
             <button
