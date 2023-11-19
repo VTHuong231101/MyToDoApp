@@ -22,8 +22,8 @@ function TaskList({ array, mode, setComplete, setImportant }) {
     return (
         <div
             className=
-            {mode ? "2xl:w-6/12 2xl:h-96 md:w-4/5 md:h-2/3 mt-4 mx-auto bg-slate-700 rounded-md overflow-auto h-2/3 w-11/12"
-                : "2xl:w-6/12 2xl:h-96 md:w-4/5 md:h-2/3 mt-4 mx-auto bg-slate-200 rounded-md overflow-auto h-2/3 w-11/12"}
+            {mode ? "2xl:w-6/12 2xl:h-96 md:w-4/5 md:h-2/3 mt-4 mx-auto bg-slate-700 rounded-md overflow-auto w-11/12"
+                : "2xl:w-6/12 2xl:h-96 md:w-4/5 md:h-2/3 mt-4 mx-auto bg-slate-200 rounded-md overflow-auto w-11/12"}
             style={{
             }}
         >

@@ -1,7 +1,6 @@
 import './App.css';
 import React, { useState, useEffect } from 'react';
 import AddTask from './components/AddTask';
-import TaskFilter from './components/TaskFilter';
 import TaskList from './components/TaskList';
 
 localStorage.getItem('list-task') || localStorage.setItem("list-task", "[]");
@@ -25,8 +24,7 @@ function App() {
   const [darkMode, setDarkMode] = useState(currentHour >= 17 || currentHour <= 5);
 
   useEffect(() => {
-    const htmlElement = document.querySelector('html');
-    darkMode ? htmlElement.classList.add('dark') : htmlElement.classList.remove('dark');
+    darkMode ? document.body.classList.add('dark') : document.body.classList.remove('dark');
   })
 
   // Handle localStorage
