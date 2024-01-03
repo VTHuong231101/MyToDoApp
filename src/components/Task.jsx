@@ -44,6 +44,11 @@ function Task({ data, index, mode, complete, important }) {
                     onClick={() => important(index)}
                     alt=''
                 />
+                <img
+                    className='h-5 self-center mr-3 cursor-pointer'
+                    src='./trash-can-black.png'
+                    alt=''
+                />
             </div>
         </div>
     );
