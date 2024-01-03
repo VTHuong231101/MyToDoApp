@@ -91,7 +91,7 @@ function App() {
           </span>
 
           <img
-            className='h-6 2xl:ml-56 md:ml-40 mr-9'
+            className='h-6 2xl:ml-56 md:ml-40 mr-9 cursor-pointer'
             src={darkMode ? 'sun.png' : '/moon.png'}
             onClick={() => setDarkMode(!darkMode)}
             alt=''

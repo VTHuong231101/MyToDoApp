@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useRef, useState } from 'react';
 import PropTypes from 'prop-types';
 import './AddTask.css';
 
@@ -9,13 +9,15 @@ AddTask.propTypes = {
 
 function AddTask({ setListTask, mode }) {
     const [job, setJob] = useState({});
+    const addTask = useRef();
 
     const handleSubmitJob = () => {
         const inputValue = document.querySelector('input').value;
 
         if (inputValue !== '') {
-            setListTask(prev => [...prev, job])
+            setListTask(prev => [...prev, job]);
             document.querySelector('input').value = '';
+            addTask.current.focus();
         }
     }
 
@@ -27,6 +29,7 @@ function AddTask({ setListTask, mode }) {
             }}
         >
             <input
+                ref={addTask}
                 type='text'
                 placeholder='Add your tasks'
                 className=
